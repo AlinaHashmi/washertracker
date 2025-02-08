@@ -1,0 +1,119 @@
+.washerdryer .color-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: rgb(3, 82, 3); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+.washerdryer #toggle1:checked + .color-button,
+.washerdryer #toggle2:checked + .color-button,
+.washerdryer #toggle3:checked + .color-button, 
+.washerdryer #toggle4:checked + .color-button,
+.washerdryer #toggle5:checked + .color-button,
+.washerdryer #toggle6:checked + .color-button, 
+.washerdryer #toggle7:checked + .color-button,
+.washerdryer #toggle8:checked + .color-button,
+.washerdryer #toggle9:checked + .color-button, 
+.washerdryer #toggle10:checked + .color-button,
+.washerdryer #toggle11:checked + .color-button,
+.washerdryer #toggle12:checked + .color-button,
+.washerdryer #toggle13:checked + .color-button, 
+.washerdryer #toggle14:checked + .color-button,
+.washerdryer #toggle15:checked + .color-button,
+.washerdryer #toggle16:checked + .color-button, 
+.washerdryer #toggle17:checked + .color-button,
+.washerdryer #toggle18:checked + .color-button,
+.washerdryer #toggle19:checked + .color-button,
+.washerdryer #toggle20:checked + .color-button  {
+    background-color: rgb(154,27,27); 
+}
+
+.washerdryer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.header {
+    background-color: burlywood;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    font-size: 20px;
+    font-family: "Spline Sans", serif;
+}
+.headerimg {
+    width: 100%;
+    height: auto;
+}
+.washerbody {
+    background-color: rgb(255, 252, 246);
+}
+
+.dormline {
+    background-color: rgb(154,27,27);
+    padding: 0.25%;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Spline Sans", serif;
+} 
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(255, 252, 246);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+}
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(154,27,27);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
