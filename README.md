@@ -1,4 +1,5 @@
 # washertracker
+Team Members: Shelby Osteen and Alina Hashmi
 
 Project Log:
 
