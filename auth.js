@@ -24,7 +24,7 @@ function handleAuthCallback() {
                 localStorage.setItem("auth_token", authResult.idToken);
                 localStorage.setItem("user_email", email);
             } else {
-                console.error("Unauthorized: Email must be from the .uga domain.");
+                console.error("Unauthorized: Email must be from the uga.edu domain.");
                 alert("Access restricted to UGA email addresses.");
             }
         } else if (err) {
