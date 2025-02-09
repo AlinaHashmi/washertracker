@@ -6,39 +6,41 @@ const auth0Client = new auth0.WebAuth({
     scope: "openid profile email"
 });
 
-// Function to check authentication
 function checkAuth() {
     const token = localStorage.getItem("auth_token");
-    return token !== null;  // User is authenticated if token exists
+    return token !== null;  
 }
 
-// Function to log in the user
+
 function login() {
     auth0Client.authorize();
 }
 
-// Function to handle authentication callback
 function handleAuthCallback() {
     auth0Client.parseHash((err, authResult) => {
         if (authResult && authResult.idToken) {
-            localStorage.setItem("auth_token", authResult.idToken);
-            localStorage.setItem("user_email", authResult.idTokenPayload.email);
+            const email = authResult.idTokenPayload.email;
+            if (email && email.endsWith("uga.edu")) {
+                localStorage.setItem("auth_token", authResult.idToken);
+                localStorage.setItem("user_email", email);
+            } else {
+                console.error("Unauthorized: Email must be from the .uga domain.");
+                alert("Access restricted to UGA email addresses.");
+            }
         } else if (err) {
             console.error("Authentication error:", err);
         }
     });
 }
 
-// Function to check auth before allowing dorm selection
 function requireAuth(event) {
     if (!checkAuth()) {
-        event.preventDefault(); // Stop the link from opening
-        alert("Please log in first!");
-        login(); // Redirect to login page
+        event.preventDefault(); 
+        alert("Please log with a valid UGA account");
+        login(); 
     }
 }
 
-// Attach event listeners to dorm buttons
 document.addEventListener("DOMContentLoaded", () => {
     handleAuthCallback(); // Handle authentication response
     document.querySelectorAll(".dorm_button").forEach(button => {
