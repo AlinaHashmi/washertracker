@@ -3,6 +3,9 @@ Team Members: Shelby Osteen and Alina Hashmi
 
 Project Log:
 
+Project =>
+ Implemented a user-input based web application to let students in high rise dorms know when washer and dryers are available. Users select the dorm they correspond to and after authorizing a valid UGA google account, are taken to a web page with the current availability washers and dryers for them to check as in/ out of use. 
+
 Friday =>
  Came up with the idea that tracked which washers and dryers are in use at the freshmen high-rise dorms.
  Started working on individual pages. 
